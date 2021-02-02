@@ -1,5 +1,8 @@
+import { minutesToDuration } from "../utils/duration";
+import React from "react";
+
 const DisplayBreak = ({breakDuration}) => {
-    return (breakDuration <10) ? "0"+breakDuration+":00" : breakDuration+":00";
-};
+    return <span className="input-group-text" data-testid="duration-break">Break Duration: {minutesToDuration(breakDuration)}</span>
+}
 
 export default DisplayBreak;
